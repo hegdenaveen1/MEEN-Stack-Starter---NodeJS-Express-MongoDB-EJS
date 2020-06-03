@@ -8,7 +8,7 @@ var User = require("./models/user");
 
 
 
-mongoose.connect("mongodb://localhost/brute_force_challenge2");
+mongoose.connect("mongodb+srv://Naveen:abcde12345@bruteforce1cluster0-2zyxa.mongodb.net/test2?retryWrites=true&w=majority");
 //mongodb://localhost/brute_force_login_challenge
 //mongodb+srv://Naveen:abcde12345@bruteforce1cluster0-2zyxa.mongodb.net/test?retryWrites=true&w=majority
 
