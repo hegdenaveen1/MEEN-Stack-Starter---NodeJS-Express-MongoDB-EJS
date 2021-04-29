@@ -8,9 +8,8 @@ var User = require("./models/user");
 
 
 
-mongoose.connect("mongodb+srv://Naveen:abcde12345@bruteforce1cluster0-2zyxa.mongodb.net/test2?retryWrites=true&w=majority");
-//mongodb://localhost/brute_force_login_challenge
-//mongodb+srv://Naveen:abcde12345@bruteforce1cluster0-2zyxa.mongodb.net/test?retryWrites=true&w=majority
+mongoose.connect("mongodb://localhost/blahblah");
+
 
 app.use(bodyParser.urlencoded({
      extended: true
@@ -39,21 +38,6 @@ app.use(function(req,res,next){
 
 
 
-app.get("/flag",isLoggedIn, function(req,res){	
-			res.render("flag");	
-});
-
-
-
-var newUser = new User({username: "Admin"});
-	User.register(newUser,"Dolphin", function(err, user){
-		if(err)
-		{
-			console.log(err);
-			return res.render("login");
-		}
-		console.log("User Account Created");
-	});
 
 
 app.get("/",function(req,res){
